@@ -4,3 +4,12 @@ node_js:
 - '0.10'
 before_script:
 - npm install -g grunt-cli
+deploy:
+  provider: releases
+  api_key:
+    secure: dW6Ih6h//G4o5S5Ma+dT4VHiflw0Z8nHaIxLtHMasp5LXfcujzpSlHXUGxSL9fzab3B4+hCi4r7CziJ+Y89FeHL8vcQt+Y4h7VDuZ/EGvMnkb3GQccE2xduSAPoMjFDhm3cC7rF0NdwfQAjY0wTYhiPp+HewdIYBcIqo/krfKtAeIwgnjUPKTvWaiIQJHTJvdB+OVoBknyoO/GMNmZBg5ewRLzPlL3YCE5jYcQQjLKujOL3Qb2kiXzLiysUTnn1NE8Ym5GAfaigPbtlOg5rMhY6q+MmpPMdxhTNvRqrOgOfr40M2tw93qbx7GVJXbfjaalTvc7FAC/xwIPnZFE9m6FFGnjMGfxV+//TxoMcEDt3NtkrRq1ylvbVWrrDRF71Xh4RurtH9VgFUsz2Xm5s6+sS/HltZxTASbTiVRVREr6tfcE/KAkTmv06tS8TdtgQmE9TOGjiUirwU2+Z6NXqokSi/X+q6SWL6jGOfOWh2Xa4BtUCHTD9e/gBYpIbu/IH3Kosajywh1eFU8ACk2r1AHGhXZNCAHq1CJIpYAOoiiFCSGk2cRIC/6oiWCRjKNR7bJTu9bbYHHwd+uNoPEicGkBZXmblrYRwGqbUgMk218iTe+3ckhdQJcE5GNzNjHRGz/bRGglK0fH3YFhQAlF5jh+VSsPQsNTKI1SOo0mTCi8E=
+  file: build/spid-sdk-pack.zip
+  skip_cleanup: true
+  on:
+    repo: joawan/sdk-js
+    tags: true
